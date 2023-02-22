@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+  button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  button.accordion:hover {
+    background-color: #ddd;
+  }
+  button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  button.accordion[aria-expanded="true"]:after {
+    content: '\2212';
+  }
+  div.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+  div.panel[aria-hidden="false"] {
+    max-height: 100%;
+  }
